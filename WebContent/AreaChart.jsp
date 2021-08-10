@@ -21,7 +21,7 @@ else{
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
 	String query="Select year(TradingDate)  as tDate,Price_Open from price where   symbol=? group by year(TradingDate)";
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	PreparedStatement st= connection.prepareStatement(query);
 	st.setString(1, symbol1);
 	int xVal ;
@@ -50,7 +50,7 @@ list = new ArrayList<Map<Object,Object>>();
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
 	String query="Select year(TradingDate)  as tDate,Price_Open from price where   symbol=? group by year(TradingDate)";
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	PreparedStatement st= connection.prepareStatement(query);
 	st.setString(1, symbol2);
 	int xVal ;
