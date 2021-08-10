@@ -25,7 +25,7 @@ try{
 "TRUNCATE((Low),2) as Low,"+
 "TRUNCATE((High),2) as High"
 			+" from price where symbol=?  and (tradingdate) between ? and ? ";
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	PreparedStatement st= connection.prepareStatement(query);
 	st.setString(1, symbol);
 	st.setString(2,startDate);
@@ -68,7 +68,7 @@ catch(SQLException e){
 list = new ArrayList<Map<Object,Object>>();
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	ResultSet resultSet=null;
 	
 	String query=" select CONCAT(year(TradingDate),'-',DATE_FORMAT(TradingDate,'%b'),'-', day(TradingDate)) as tdate,"
