@@ -10,7 +10,7 @@ List<Map<Object,Object>> list = new ArrayList<Map<Object,Object>>();
 String dataPoints = null;
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	Statement statement = connection.createStatement();
 	String exchangeName;
 	float percentage;
