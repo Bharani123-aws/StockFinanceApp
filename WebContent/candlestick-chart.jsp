@@ -23,7 +23,7 @@ try{
 		      + " (Select max(year(TradingDate)) from price  where symbol=?) and QUARTER(TradingDate)=4"
 		  +" ) AS sub_query"
 		 +" GROUP BY  TradingDate";
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	PreparedStatement st= connection.prepareStatement(query);
 	st.setString(1, symbol);
 	st.setString(2, symbol);
