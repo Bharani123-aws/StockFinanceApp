@@ -25,7 +25,7 @@ else{
 
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 
 	ResultSet resultSet=null;
 	if("1".equals(range)){
@@ -121,7 +121,7 @@ catch(SQLException e){
 list = new ArrayList<Map<Object,Object>>();
 try{
 	Class.forName("com.mysql.jdbc.Driver"); 
-	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "bh12");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_project?autoReconnect=true&useSSL=false", "root", "");
 	ResultSet resultSet=null;
 	if("1".equals(range)){
 	query="select CONCAT(DATE_FORMAT(TradingDate,'%b'),'-', day(TradingDate)) as tdate,"+
